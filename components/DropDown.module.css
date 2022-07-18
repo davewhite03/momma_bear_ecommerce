@@ -1,0 +1,64 @@
+.selector {
+  list-style: none;
+  font-size: 2rem;
+  cursor: pointer;
+  width: 5rem;
+  margin: 0 auto 0 auto;
+}
+.selector li {
+  animation: grow 1.5s infinite;
+  border: 1.5px solid #6a5353f1;
+  border-radius: 0.5rem;
+  width: 5rem;
+}
+.selector li:hover {
+  animation: none;
+  border: none;
+}
+.selector li ul li {
+  display: none;
+  list-style: none;
+  border: none;
+}
+
+.selector:hover li ul li {
+  display: block;
+  opacity: 0;
+  -webkit-animation: menu1 ease-in-out forwards;
+  animation: menu1 ease-in-out forwards;
+  -webkit-animation-duration: 300ms;
+  animation-duration: 300ms;
+  -webkit-animation-delay: 0ms;
+  animation-delay: 0ms;
+}
+.selector li ul li:hover,
+.selector li ul li.hover,
+.selector li ul li:active {
+  color: #b49898;
+  cursor: pointer;
+}
+
+@keyframes grow {
+  0% {
+    transform: scale(0.5 0 0.5);
+  }
+  50% {
+    transform: scale(1.1, 1.1);
+  }
+  100% {
+    transform: 0.5 0 0.5;
+  }
+}
+
+@keyframes menu1 {
+  from {
+    opacity: 0;
+    -webkit-transform: rotateX(-180deg);
+    transform: rotateX(-180deg);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: rotateX(0deg);
+    transform: rotateX(0deg);
+  }
+}

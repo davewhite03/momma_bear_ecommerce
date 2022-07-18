@@ -1,0 +1,7 @@
+.store {
+  margin-left: 1rem;
+  margin-right: 10rem;
+}
+.store:hover {
+  color: #b49898;
+}
