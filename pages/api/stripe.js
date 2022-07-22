@@ -26,36 +26,15 @@ export default async function handler(req, res) {
             .replace('-webp', '.webp');
 
           return {
-            description: `(Size_${item.itemSize}) (Color_${item.itemColor})|| ${item.itemMessage}`,
-
-            price_data: {
-              currency: 'usd',
-
-              product_data: {
-                name: item.name,
-                images: [newImage],
-
-                metadata: {
-                  id: item.id,
-                  default_price: item.slug.current,
-                  tax_behavior: 'exclusive',
-                  tax_code: 'txcd_99999999',
-                },
-              },
-
-              unit_amount: item.price * 100,
-            },
-            adjustable_quantity: {
-              enabled: true,
-              minimum: 1,
-            },
-
+            price: item.slug.current,
+            description: item.itemSize,
             quantity: item.quantity,
           };
         }),
 
         success_url: `${req.headers.origin}/success`,
         cancel_url: `${req.headers.origin}/canceled`,
+        automatic_tax: { enabled: true },
       };
 
       // Create Checkout Sessions from body params.

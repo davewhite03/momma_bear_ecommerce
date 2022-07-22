@@ -166,7 +166,7 @@ span.text-red {
 }
 .hero-banner-container h1 {
   color: #6a5353f1;
-  font-size: 10em;
+  font-size: 8em;
   margin-left: -20px;
   text-transform: uppercase;
 }
@@ -632,7 +632,7 @@ span.text-red {
 .custom-message p {
   color: red;
 }
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 500px) {
   .hero-banner-container {
     height: 560px;
   }
@@ -771,5 +771,19 @@ span.text-red {
   .btn-container {
     width: 300px;
     margin: auto;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .hero-banner-container h1 {
+    font-size: 6em;
+  }
+}
+@media only screen and (max-width: 1081px) {
+  .hero-banner-container h1 {
+    font-size: 1.5em;
+  }
+  .hero-banner-container h3 {
+    font-size: 1.5em;
   }
 }

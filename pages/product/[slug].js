@@ -73,7 +73,7 @@ const ProductDetails = ({ product, products }) => {
           <div className="quantity">
             <h3>Color:</h3>
             <p className="quantity-desc">
-              <select onChange={colorHandler} className="size-select">
+              <select onClick={colorHandler} className="size-select">
                 {color?.map((colors) => (
                   <option value={colors} key={colors}>
                     {colors}
@@ -86,7 +86,7 @@ const ProductDetails = ({ product, products }) => {
           <div className="quantity">
             <h3>Size:</h3>
             <p className="quantity-desc">
-              <select onChange={sizehandler} className="size-select">
+              <select onClick={sizehandler} className="size-select">
                 {size?.map((sizes) => (
                   <option value={sizes} key={sizes}>
                     {sizes}
