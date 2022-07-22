@@ -783,7 +783,15 @@ span.text-red {
   .hero-banner-container h1 {
     font-size: 1.5em;
   }
+
   .hero-banner-container h3 {
     font-size: 1.5em;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .hero-banner-image {
+    margin-top: 2rem;
+    height: 40%;
+    width: 35%;
   }
 }
