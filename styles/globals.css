@@ -632,7 +632,7 @@ span.text-red {
 .custom-message p {
   color: red;
 }
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 558px) {
   .hero-banner-container {
     height: 560px;
   }
@@ -790,8 +790,21 @@ span.text-red {
 }
 @media only screen and (max-width: 767px) {
   .hero-banner-image {
-    margin-top: 2rem;
+    margin: 3rem 3rem 0 0;
     height: 40%;
-    width: 35%;
+    width: 40%;
+  }
+  .desc {
+    display: none;
+  }
+}
+@media only screen and (max-width: 359px) {
+  .hero-banner-image {
+    margin-top: 10rem;
+    height: 20%;
+    width: 20%;
+  }
+  .desc {
+    display: none;
   }
 }
