@@ -10,11 +10,11 @@ const ul = (props) => {
       <ul className={classes.selector}>
         <li>
           <a className={classes.here}> Here</a>
-          <ul value="Shirt" className={classes.categories}>
+          <ul value="" className={classes.categories}>
             <li>
-              <a data-id="Shirt" value="Shirt" onClick={clickHandler}>
+              <a data-id="speech" onClick={clickHandler}>
                 {' '}
-                Shirt
+                Speech_Therapy
               </a>
             </li>
             <li>
