@@ -14,6 +14,11 @@ export default async function handler(req, res) {
         shipping_address_collection: {
           allowed_countries: ['US', 'CA'],
         },
+        shipping_options: [
+          {
+            shipping_rate: 'shr_1LQG4uI3ZJ6lcJ4QXNSMZIzE',
+          },
+        ],
 
         line_items: req.body.map((item) => {
           console.log(item.id);
@@ -27,7 +32,9 @@ export default async function handler(req, res) {
 
           return {
             price: item.slug.current,
-            description: item.itemSize,
+            description: ` ${item.itemSize}
+            ${item.itemMessage}
+            `,
             quantity: item.quantity,
           };
         }),

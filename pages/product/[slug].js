@@ -70,23 +70,11 @@ const ProductDetails = ({ product, products }) => {
           <h4>Details: </h4>
           <p>{details}</p>
           <p className="price">${price}</p>
-          <div className="quantity">
-            <h3>Color:</h3>
-            <p className="quantity-desc">
-              <select onClick={colorHandler} className="size-select">
-                {color?.map((colors) => (
-                  <option value={colors} key={colors}>
-                    {colors}
-                  </option>
-                ))}
-              </select>
-            </p>
-          </div>
 
           <div className="quantity">
             <h3>Size:</h3>
             <p className="quantity-desc">
-              <select onClick={sizehandler} className="size-select">
+              <select onChange={sizehandler} className="size-select">
                 {size?.map((sizes) => (
                   <option value={sizes} key={sizes}>
                     {sizes}
@@ -109,7 +97,10 @@ const ProductDetails = ({ product, products }) => {
           </div>
           <div className="custom-message">
             <p>Customize Order</p>
-            <p>Multiple sizes, colors , ect...</p>
+            <p>Shirt title: </p>
+            <p>Design colors:</p>
+            <p> Shirt size:</p>
+            <p>Shirt color:</p>
             <textarea onChange={messageHandler}></textarea>
           </div>
           <div className="buttons">

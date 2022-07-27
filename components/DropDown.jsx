@@ -19,15 +19,15 @@ const ul = (props) => {
             </li>
             <li>
               {' '}
-              <a data-id="Pants" value="Shirt" onClick={clickHandler}>
+              <a data-id="dance" onClick={clickHandler}>
                 {' '}
-                Pants
+                Dance
               </a>
             </li>
             <li>
-              <a data-id="Cups" value="Shirt" onClick={clickHandler}>
+              <a data-id="nurse" value="Shirt" onClick={clickHandler}>
                 {' '}
-                Cups
+                Nurse
               </a>
             </li>
           </ul>

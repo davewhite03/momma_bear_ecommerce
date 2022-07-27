@@ -34,9 +34,7 @@ export const StateContext = ({ children }) => {
     if (itemSize == '') {
       return alert('Select a Size');
     }
-    if (itemColor == '') {
-      return alert('Select a Color');
-    }
+
     setTotalPrice(
       (prevTotalPrice) => prevTotalPrice + product.price * quantity
     );

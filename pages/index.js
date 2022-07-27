@@ -1,14 +1,11 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { client } from '../lib/client';
 import { Product, FooterBanner, HeroBanner, DropDown } from '../components';
 const index = ({ products, bannerData }) => {
   const [filteredCat, setFilteredCat] = useState('');
-  const filterHandler = (e) => {
-    setFilteredCat(e);
-    console.log(e);
-  };
 
   console.log(filteredCat);
+
   const filteredProduct = products.filter((product) => {
     return product.category === filteredCat;
   });
@@ -32,6 +29,7 @@ const index = ({ products, bannerData }) => {
 
 export const getServerSideProps = async () => {
   const query = '*[_type == "product"]';
+
   const products = await client.fetch(query);
 
   const bannerQuery = '*[_type == "banner"]';
