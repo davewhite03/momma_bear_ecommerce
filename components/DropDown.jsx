@@ -9,12 +9,11 @@ const ul = (props) => {
     <div>
       <ul className={classes.selector}>
         <li>
-          <a className={classes.here}> Here</a>
           <ul value="" className={classes.categories}>
-            <li>
+            <li className={classes.speech}>
               <a data-id="speech" onClick={clickHandler}>
                 {' '}
-                Speech_Therapy
+                Speech Therapy
               </a>
             </li>
             <li>
@@ -28,6 +27,42 @@ const ul = (props) => {
               <a data-id="nurse" value="Shirt" onClick={clickHandler}>
                 {' '}
                 Nurse
+              </a>
+            </li>
+            <li>
+              <a data-id="police" value="Police" onClick={clickHandler}>
+                {' '}
+                Police
+              </a>
+            </li>
+            <li>
+              <a data-id="bridal" value="Bridal" onClick={clickHandler}>
+                {' '}
+                Bridal
+              </a>
+            </li>
+            <li className={classes.speech}>
+              <a data-id="ota" value="OTA" onClick={clickHandler}>
+                {' '}
+                Occupational Therapy
+              </a>
+            </li>
+            <li className={classes.speech}>
+              <a data-id="pta" value="OTA" onClick={clickHandler}>
+                {' '}
+                Physical Therapy
+              </a>
+            </li>
+            <li className={classes.speech}>
+              <a data-id="fire" value="Fire" onClick={clickHandler}>
+                {' '}
+                Fire Fighter
+              </a>
+            </li>
+            <li className={classes.speech}>
+              <a data-id="emt" value="Emt" onClick={clickHandler}>
+                {' '}
+                EMT/EMS/Paramedic
               </a>
             </li>
           </ul>

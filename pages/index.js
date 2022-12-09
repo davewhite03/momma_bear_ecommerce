@@ -1,14 +1,28 @@
 import React, { useState, useEffect } from 'react';
 import { client } from '../lib/client';
-import { Product, FooterBanner, HeroBanner, DropDown } from '../components';
+import {
+  Product,
+  FooterBanner,
+  HeroBanner,
+  DropDown,
+  Pagination,
+} from '../components';
+
 const index = ({ products, bannerData }) => {
   const [filteredCat, setFilteredCat] = useState('');
-
-  console.log(filteredCat);
-
+  const [currentPage, setCurrentPage] = useState(1);
+  const [recordsPerPage] = useState(5);
+  console.log(products);
   const filteredProduct = products.filter((product) => {
     return product.category === filteredCat;
   });
+  const indexOfLastRecord = currentPage * recordsPerPage;
+  const indexOfFirstRecord = indexOfLastRecord - recordsPerPage;
+  const currentRecords = filteredProduct.slice(
+    indexOfFirstRecord,
+    indexOfLastRecord
+  );
+  const nPages = Math.ceil(filteredProduct.length / recordsPerPage);
 
   return (
     <>
@@ -16,10 +30,21 @@ const index = ({ products, bannerData }) => {
 
       <div className="products-heading">
         <h2>Select Option Start Shopping!</h2>
+
         <DropDown onClick={setFilteredCat} />
       </div>
+      {filteredCat ? (
+        <Pagination
+          nPages={nPages}
+          currentPage={currentPage}
+          setCurrentPage={setCurrentPage}
+        />
+      ) : (
+        ''
+      )}
+
       <div className="products-container">
-        {filteredProduct?.map((product) => (
+        {currentRecords?.map((product) => (
           <Product key={product._id} product={product} />
         ))}
       </div>

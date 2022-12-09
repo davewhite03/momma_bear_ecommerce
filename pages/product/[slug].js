@@ -81,6 +81,9 @@ const ProductDetails = ({ product, products }) => {
                   </option>
                 ))}
               </select>
+              <span style={{ fontWeight: 300 }}>
+                (Call 717-404-4622 for sizes XXL and up.)
+              </span>
             </p>
           </div>
           <div className="quantity">
@@ -96,7 +99,12 @@ const ProductDetails = ({ product, products }) => {
             </p>
           </div>
           <div className="custom-message">
-            <p>Customize Order</p>
+            <p style={{ fontWeight: 700 }}>
+              Customize Order
+              <span style={{ fontWeight: 300 }}>
+                (type color selection or default will be selected)
+              </span>
+            </p>
             <p>Shirt title: </p>
             <p>Design colors:</p>
             <p> Shirt size:</p>

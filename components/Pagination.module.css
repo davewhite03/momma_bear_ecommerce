@@ -1,0 +1,22 @@
+.container {
+  padding: 0;
+
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+.container li {
+  font-size: 150%;
+
+  list-style: none;
+}
+.container li a {
+}
+.pageNumber {
+}
+
+.active {
+  color: red;
+  border-bottom: solid black 1px;
+}
