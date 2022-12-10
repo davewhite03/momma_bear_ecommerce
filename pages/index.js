@@ -11,7 +11,7 @@ import {
 const index = ({ products, bannerData }) => {
   const [filteredCat, setFilteredCat] = useState('');
   const [currentPage, setCurrentPage] = useState(1);
-  const [recordsPerPage] = useState(5);
+  const [recordsPerPage] = useState(10);
   console.log(products);
   const filteredProduct = products.filter((product) => {
     return product.category === filteredCat;
